@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>contact</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body id="body">
+    <header class="main-header">
+        <nav class="nav">
+            <ul id="head"> 
+              <div id="div">
+                <li id="first"><a href="main.html">HOME</a></li>
+                <li id="first"><a href="contact.html#about">ABOUT</a></li>
+                <li class="third"><a href="contact.html#skills">SKILLS</a></li>
+                <li class="fourth"><a href="work.html">WORK EXPERICENCE</a></li>
+                <li class="fifth"><a href="/my_portfolio/project.html">PROJECTS</a></li>
+                <li class="sixth"><a href="contact.html#contact">CONTACT</a></li>
+              </div> 
+             </ul>
+        </nav>
+    </header>
+
+<section class="section">
+  <di>
+    <h1 id="about">MORE ABOUT ME</h1>
+    <h2>Full-Stack Developer and a little bit of everything</h2>
+
+    <p><strong>I'm Anthony Ariik</strong>, a proactive full-stack developer passionate about creating dynamic web experiences. From frontend to backend, I thrive on solving complex problems with clean, efficient code. My expertise spans <strong>React, Next.js, and Node.js</strong>, and I'm always eager to learn more.</p>
+    <p>When I'm not coding, I'm exploring new ideas and staying curious. Life's about balance, and I love embracing every part of it.</p>
+    <p>I believe in waking up each day eager to make a difference!</p>
+  </di>
+</section>
+
+
+<section class="skills-section">
+    <h1 id="skills">My Skills</h1>
+    <div class="skills-container">
+        <div class="skill-card">HTML & CSS</div>
+        <div class="skill-card">JavaScript</div>
+        <div class="skill-card">Node.js</div>
+        <div class="skill-card">React.js</div>
+        <div class="skill-card">Next.js</div>
+        <div class="skill-card">UX/UI Design</div>
+    </div>
+</section>
+
+
+<section class="projects-section">
+    <h2>My Projects</h2>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="ariik.png" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="./i.png" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="./ig.png" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="./image.png" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="./ariik.png" style="width:100%">
+        </div>
+    </div>
+</section>
+
+<style>
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+</style>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    let slides = document.getElementsByClassName("mySlides");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    slides[slideIndex-1].style.display = "block";  
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+<div>
+
+    <div class="contact-container">
+        <h2 id="contact">LET'S WORK <span>TOGETHER</span></h2>
+        
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your@email.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <ul class="social">
+            <li>
+                <a href="https://www.linkedin.com" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/@ariikoj" target="_blank">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </li>
+        </ul>
+        <p>Copyright © 2025 Anthony Ariik. All rights reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
