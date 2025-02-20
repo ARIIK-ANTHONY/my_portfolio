@@ -27,15 +27,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Image slider functionality
-    let slideIndex = 0;
-    showSlides();
-
-    function showSlides() {
-        const slides = document.querySelectorAll('.mySlides');
-        slides.forEach(slide => slide.style.display = 'none');
-        slideIndex++;
-        if (slideIndex > slides.length) { slideIndex = 1 }
-        slides[slideIndex - 1].style.display = 'block';
-        setTimeout(showSlides, 2000); // Change image every 2 seconds
-    }
-});
+    let slides = document.getElementsByClassName("mySlides");
+console.log(slides); // Debugging: Check if slides are found
+if (slides.length === 0) {
+    console.error("No elements with class 'mySlides' found.");
+} else {
+    slides[0].style.display = "block";  // Ensure it exists
+}
